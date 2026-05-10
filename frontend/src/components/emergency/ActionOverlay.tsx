@@ -53,7 +53,7 @@ export default function ActionOverlay({
     return msg;
   }, [location, mapsUrl]);
 
-  const showFeedback = (label: string, status: ActionFeedback['status']) => {
+  const showFeedback = (label: string, status: 'success' | 'info' | 'error') => {
     setFeedback({ label, status });
     setTimeout(() => setFeedback(null), 3000);
   };
